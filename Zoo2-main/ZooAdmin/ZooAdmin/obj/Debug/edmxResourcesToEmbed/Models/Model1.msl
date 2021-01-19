@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище dbZooModelContainer" CdmEntityContainer="dbZooEntities">
+    <EntitySetMapping Name="Animals">
+      <EntityTypeMapping TypeName="dbZooModel.Animals">
+        <MappingFragment StoreEntitySet="Animals">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameAnimals" ColumnName="NameAnimals" />
+          <ScalarProperty Name="Daily" ColumnName="Daily" />
+          <ScalarProperty Name="IDContinent" ColumnName="IDContinent" />
+          <ScalarProperty Name="IDFamalyAnimals" ColumnName="IDFamalyAnimals" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnimalsHome">
+      <EntityTypeMapping TypeName="dbZooModel.AnimalsHome">
+        <MappingFragment StoreEntitySet="AnimalsHome">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameComplex" ColumnName="NameComplex" />
+          <ScalarProperty Name="IDRoom" ColumnName="IDRoom" />
+          <ScalarProperty Name="Reservoir" ColumnName="Reservoir" />
+          <ScalarProperty Name="Heating" ColumnName="Heating" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Continent">
+      <EntityTypeMapping TypeName="dbZooModel.Continent">
+        <MappingFragment StoreEntitySet="Continent">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameContinent" ColumnName="NameContinent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FamelyAnimals">
+      <EntityTypeMapping TypeName="dbZooModel.FamelyAnimals">
+        <MappingFragment StoreEntitySet="FamelyAnimals">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameFamaly" ColumnName="NameFamaly" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="dbZooModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Room">
+      <EntityTypeMapping TypeName="dbZooModel.Room">
+        <MappingFragment StoreEntitySet="Room">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameRoom" ColumnName="NameRoom" />
+          <ScalarProperty Name="NumberAnimals" ColumnName="NumberAnimals" />
+          <ScalarProperty Name="IDNameAnimals" ColumnName="IDNameAnimals" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SignIn">
+      <EntityTypeMapping TypeName="dbZooModel.SignIn">
+        <MappingFragment StoreEntitySet="SignIn">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IDRole" ColumnName="IDRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

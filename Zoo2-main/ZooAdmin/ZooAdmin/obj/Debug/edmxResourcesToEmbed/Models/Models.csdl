@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbZooModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Animals">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameAnimals" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Daily" Type="Double" Nullable="false" />
+    <Property Name="IDContinent" Type="Int32" />
+    <Property Name="IDFamalyAnimals" Type="Int32" />
+    <Property Name="IDRoom" Type="Int32" />
+    <Property Name="IDAnimalsHome" Type="Int32" />
+    <NavigationProperty Name="Continent" Relationship="Self.FK_Animals_Continent_Continent_ID" FromRole="Animals" ToRole="Continent" />
+    <NavigationProperty Name="AnimalsHome" Relationship="Self.FK_Animals_IDAnimalsHome" FromRole="Animals" ToRole="AnimalsHome" />
+    <NavigationProperty Name="FamelyAnimals" Relationship="Self.FK_Animals_IDFamalyAnimals_FamelyAnimals_ID" FromRole="Animals" ToRole="FamelyAnimals" />
+    <NavigationProperty Name="Room" Relationship="Self.FK_Animals_IDRoom_Room_ID" FromRole="Animals" ToRole="Room" />
+  </EntityType>
+  <EntityType Name="AnimalsHome">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameComplex" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Reservoir" Type="Boolean" Nullable="false" />
+    <Property Name="Heating" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Animals" Relationship="Self.FK_Animals_IDAnimalsHome" FromRole="AnimalsHome" ToRole="Animals" />
+  </EntityType>
+  <EntityType Name="Continent">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameContinent" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Animals" Relationship="Self.FK_Animals_Continent_Continent_ID" FromRole="Continent" ToRole="Animals" />
+  </EntityType>
+  <EntityType Name="FamelyAnimals">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameFamaly" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Animals" Relationship="Self.FK_Animals_IDFamalyAnimals_FamelyAnimals_ID" FromRole="FamelyAnimals" ToRole="Animals" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="SignIn" Relationship="Self.FK_SignIn_IDRole_Role_RoleID" FromRole="Role" ToRole="SignIn" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameRoom" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NumberAnimals" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Animals" Relationship="Self.FK_Animals_IDRoom_Room_ID" FromRole="Room" ToRole="Animals" />
+  </EntityType>
+  <EntityType Name="SignIn">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Username" />
+      <PropertyRef Name="Password" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IDRole" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_SignIn_IDRole_Role_RoleID" FromRole="SignIn" ToRole="Role" />
+  </EntityType>
+  <Association Name="FK_Animals_Continent_Continent_ID">
+    <End Role="Continent" Type="Self.Continent" Multiplicity="0..1" />
+    <End Role="Animals" Type="Self.Animals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Continent">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Animals">
+        <PropertyRef Name="IDContinent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Animals_IDAnimalsHome">
+    <End Role="AnimalsHome" Type="Self.AnimalsHome" Multiplicity="0..1" />
+    <End Role="Animals" Type="Self.Animals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AnimalsHome">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Animals">
+        <PropertyRef Name="IDAnimalsHome" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Animals_IDFamalyAnimals_FamelyAnimals_ID">
+    <End Role="FamelyAnimals" Type="Self.FamelyAnimals" Multiplicity="0..1" />
+    <End Role="Animals" Type="Self.Animals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FamelyAnimals">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Animals">
+        <PropertyRef Name="IDFamalyAnimals" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Animals_IDRoom_Room_ID">
+    <End Role="Room" Type="Self.Room" Multiplicity="0..1" />
+    <End Role="Animals" Type="Self.Animals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Animals">
+        <PropertyRef Name="IDRoom" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SignIn_IDRole_Role_RoleID">
+    <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
+    <End Role="SignIn" Type="Self.SignIn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="SignIn">
+        <PropertyRef Name="IDRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbZooEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Animals" EntityType="Self.Animals" />
+    <EntitySet Name="AnimalsHome" EntityType="Self.AnimalsHome" />
+    <EntitySet Name="Continent" EntityType="Self.Continent" />
+    <EntitySet Name="FamelyAnimals" EntityType="Self.FamelyAnimals" />
+    <EntitySet Name="Role" EntityType="Self.Role" />
+    <EntitySet Name="Room" EntityType="Self.Room" />
+    <EntitySet Name="SignIn" EntityType="Self.SignIn" />
+    <AssociationSet Name="FK_Animals_Continent_Continent_ID" Association="Self.FK_Animals_Continent_Continent_ID">
+      <End Role="Continent" EntitySet="Continent" />
+      <End Role="Animals" EntitySet="Animals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Animals_IDAnimalsHome" Association="Self.FK_Animals_IDAnimalsHome">
+      <End Role="AnimalsHome" EntitySet="AnimalsHome" />
+      <End Role="Animals" EntitySet="Animals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Animals_IDFamalyAnimals_FamelyAnimals_ID" Association="Self.FK_Animals_IDFamalyAnimals_FamelyAnimals_ID">
+      <End Role="FamelyAnimals" EntitySet="FamelyAnimals" />
+      <End Role="Animals" EntitySet="Animals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Animals_IDRoom_Room_ID" Association="Self.FK_Animals_IDRoom_Room_ID">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="Animals" EntitySet="Animals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SignIn_IDRole_Role_RoleID" Association="Self.FK_SignIn_IDRole_Role_RoleID">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="SignIn" EntitySet="SignIn" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

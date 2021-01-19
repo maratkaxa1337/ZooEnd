@@ -1,0 +1,228 @@
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminEditPage.g.cs
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminMenuPage.g.cs
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Home\LoginPage.g.cs
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserBuyPage.g.cs
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserContactsPage.g.cs
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserMenuPage.g.cs
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\Views\Windows\MainWindow.g.cs
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\App.g.cs
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin_Content.g.cs
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin_MarkupCompile.cache
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin_MarkupCompile.lref
+E:\Program C#\ZooAdmin\ZooAdmin\bin\Debug\ZooAdmin.exe.config
+E:\Program C#\ZooAdmin\ZooAdmin\bin\Debug\ZooAdmin.exe
+E:\Program C#\ZooAdmin\ZooAdmin\bin\Debug\ZooAdmin.pdb
+E:\Program C#\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.dll
+E:\Program C#\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.SqlServer.dll
+E:\Program C#\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignColors.dll
+E:\Program C#\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\Program C#\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.xml
+E:\Program C#\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.SqlServer.xml
+E:\Program C#\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignColors.pdb
+E:\Program C#\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\Program C#\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\Program C#\ZooAdmin\ZooAdmin\bin\Debug\ru\EntityFramework.resources.dll
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\App.baml
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminEditPage.baml
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminMenuPage.baml
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Home\LoginPage.baml
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserBuyPage.baml
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserContactsPage.baml
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserMenuPage.baml
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\Views\Windows\MainWindow.baml
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.g.resources
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.Properties.Resources.resources
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.csproj.GenerateResource.cache
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.csproj.CoreCompileInputs.cache
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.csproj.CopyComplete
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.exe
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.pdb
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Register\Register.g.cs
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Register\Register.baml
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.csprojAssemblyReference.cache
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminViewPage.g.cs
+E:\Program C#\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminViewPage.baml
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminEditPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminMenuPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminViewPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Home\LoginPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Register\RegisterPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserBuyPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserContactsPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserMenuPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Windows\MainWindow.g.cs
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\App.g.cs
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin_Content.g.cs
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin_MarkupCompile.cache
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin_MarkupCompile.lref
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\bin\Debug\ZooAdmin.exe.config
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\bin\Debug\ZooAdmin.exe
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\bin\Debug\ZooAdmin.pdb
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.dll
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.SqlServer.dll
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignColors.dll
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.xml
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.SqlServer.xml
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignColors.pdb
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\bin\Debug\ru\EntityFramework.resources.dll
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\App.baml
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminEditPage.baml
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminMenuPage.baml
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminViewPage.baml
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Home\LoginPage.baml
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Register\RegisterPage.baml
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserBuyPage.baml
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserContactsPage.baml
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserMenuPage.baml
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Windows\MainWindow.baml
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.g.resources
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.Properties.Resources.resources
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.csproj.GenerateResource.cache
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.csproj.CoreCompileInputs.cache
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.csproj.CopyComplete
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.exe
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.pdb
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.csprojAssemblyReference.cache
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminAddPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminEditPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminMenuPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminViewPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Home\LoginPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Register\RegisterPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserBuyPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserContactsPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserMenuPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Windows\MainWindow.g.cs
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\App.g.cs
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin_Content.g.cs
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin_MarkupCompile.cache
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin_MarkupCompile.lref
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.exe
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.pdb
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\bin\Debug\ZooAdmin.exe.config
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\bin\Debug\ZooAdmin.exe
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\bin\Debug\ZooAdmin.pdb
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.dll
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.SqlServer.dll
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignColors.dll
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.xml
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.SqlServer.xml
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignColors.pdb
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\bin\Debug\ru\EntityFramework.resources.dll
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\App.baml
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminEditPage.baml
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminMenuPage.baml
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminViewPage.baml
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Home\LoginPage.baml
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Register\RegisterPage.baml
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserBuyPage.baml
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserContactsPage.baml
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserMenuPage.baml
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Windows\MainWindow.baml
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminAddPage.baml
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.g.resources
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.Properties.Resources.resources
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.csproj.GenerateResource.cache
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.csproj.CoreCompileInputs.cache
+E:\Сбор моих программы на Любом языке\C#\Старый мусор\Zoo\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.csproj.CopyComplete
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminAddPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\Zoo\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminAddPage.baml
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminAddPage.g.cs
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminEditPage.g.cs
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminMenuPage.g.cs
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminViewPage.g.cs
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Home\LoginPage.g.cs
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Register\RegisterPage.g.cs
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserBuyPage.g.cs
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserContactsPage.g.cs
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserMenuPage.g.cs
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Windows\MainWindow.g.cs
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\App.g.cs
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin_Content.g.cs
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin_MarkupCompile.cache
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin_MarkupCompile.lref
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.exe
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.pdb
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\ZooAdmin.exe.config
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\ZooAdmin.exe
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\ZooAdmin.pdb
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.dll
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignColors.dll
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.xml
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\App.baml
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminAddPage.baml
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminEditPage.baml
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminMenuPage.baml
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminViewPage.baml
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Home\LoginPage.baml
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Register\RegisterPage.baml
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserBuyPage.baml
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserContactsPage.baml
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserMenuPage.baml
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Windows\MainWindow.baml
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.g.resources
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.Properties.Resources.resources
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.csproj.GenerateResource.cache
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.csproj.CopyComplete
+C:\Users\Student\Desktop\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.csprojAssemblyReference.cache
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\ZooAdmin.exe.config
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\ZooAdmin.exe
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\ZooAdmin.pdb
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.dll
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.SqlServer.dll
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignColors.dll
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.xml
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\EntityFramework.SqlServer.xml
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignColors.pdb
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\bin\Debug\ru\EntityFramework.resources.dll
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminAddPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminEditPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminMenuPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminViewPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\ViewsDate\AllDateView.g.cs
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Home\LoginPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Register\RegisterPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserBuyPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserContactsPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserMenuPage.g.cs
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Windows\MainWindow.g.cs
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\App.g.cs
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin_Content.g.cs
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin_MarkupCompile.cache
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin_MarkupCompile.lref
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\App.baml
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminAddPage.baml
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminEditPage.baml
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminMenuPage.baml
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\AdminViewPage.baml
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Admin\ViewsDate\AllDateView.baml
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Home\LoginPage.baml
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\Register\RegisterPage.baml
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserBuyPage.baml
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserContactsPage.baml
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Pages\User\UserMenuPage.baml
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\Views\Windows\MainWindow.baml
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.g.resources
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.Properties.Resources.resources
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.csproj.GenerateResource.cache
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.csproj.CoreCompileInputs.cache
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.csproj.CopyComplete
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.exe
+E:\Сбор моих программы на Любом языке\C#\My-Progect\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\ZooAdmin.pdb

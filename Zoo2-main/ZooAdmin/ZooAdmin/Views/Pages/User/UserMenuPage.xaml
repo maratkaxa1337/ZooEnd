@@ -1,0 +1,152 @@
+﻿<Page x:Class="ZooAdmin.Views.Pages.User.UserMenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZooAdmin.Views.Pages.User"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserMenuPage" TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}">
+    <!--Основной Grid-->
+    <Grid>
+        <!--Grid Основной фон-->
+        <Grid>
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+
+                <Image Source="/Image/MenuUser.jpg"/>
+
+            </StackPanel>
+
+        </Grid>
+        <!--Добавление изображение логотипа-->
+        <Grid >
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="1.9*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" Orientation="Vertical" HorizontalAlignment="Right"
+                        Margin="0">
+
+                <Image Source="/Image/logo.png" Margin="0"/>
+
+
+            </StackPanel>
+
+        </Grid>
+        <!--Grid Для кнопок-->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.4*"/>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top">
+
+                <Button x:Name="buttonBuy"
+                         Content="Купить билет"
+                         Width="444"
+                        Height="65"
+                        materialDesign:ButtonAssist.CornerRadius="20"
+                        FontFamily="Arial"
+                        Background="#FA7C1E"
+                        FontWeight="Bold"
+                        Foreground="Black"
+                        FontSize="16"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+
+                <Button x:Name="ButtonViews"
+                         Content="Просмотры наших животных"
+                        FontSize="16"
+                        Width="444"
+                        Height="65"
+                        Foreground="Black"
+                        FontWeight="Bold"
+                        FontFamily="Arial"
+                        materialDesign:ButtonAssist.CornerRadius="20"
+                        Background="#FA7C1E"
+                        Click="ButtonViews_Click"/>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+
+                <Button x:Name="ButtonContacts"
+                         Content="Контакты"
+                        FontSize="16"
+                        Width="444"
+                        Height="65"
+                        Foreground="Black"
+                        FontWeight="Bold"
+                        FontFamily="Arial"
+                        materialDesign:ButtonAssist.CornerRadius="20"
+                        Background="#FA7C1E"
+                        Click="ButtonContacts_Click"/>
+
+            </StackPanel>
+
+        </Grid>
+
+        <Grid>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                <Button Style="{StaticResource MaterialDesignToolForegroundButton}" Width="25" Height="25" x:Name="ButtonBack" Click="ButtonBack1_Click">
+
+                    <materialDesign:PackIcon Kind="ArrowBack" Background="Green" Foreground="White" BorderBrush="{x:Null}"/>
+
+                </Button>
+
+            </StackPanel>
+
+        </Grid>
+
+
+        <Grid>
+
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+
+                <Button Style="{StaticResource  MaterialDesignToolForegroundButton}" Width="25" Height="25" Click="ButtonClose_Click" x:Name="ButtonClose">
+                    <materialDesign:PackIcon Kind="Power" Background="Red" BorderBrush="{x:Null}" Foreground="White"/>
+                </Button>
+
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+    
+        <!--Добавление картинки с иконкой назад-->
+
+
+</Page>

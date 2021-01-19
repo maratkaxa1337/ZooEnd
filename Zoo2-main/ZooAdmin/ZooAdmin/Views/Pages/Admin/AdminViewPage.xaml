@@ -1,0 +1,97 @@
+﻿<Page x:Class="ZooAdmin.Views.Pages.Admin.AdminViewPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZooAdmin.Views.Pages.Admin"
+      mc:Ignorable="d" Loaded="Page_Loaded"
+      d:DesignHeight="500" d:DesignWidth="1100"
+      Title="AdminViewPage"  xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}">
+
+    <!--Глобальный Grid-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <!--Grid Первый-->
+        <Grid Grid.Row="0">
+
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBlock Text="Поиск" FontSize="15"/>
+                <TextBox Name="txbSearch" Width="200" Margin="10 0 0 0" TextChanged="txbSearch_TextChanged"/>
+            </StackPanel>
+        </Grid>
+        <!--Grid второй отображение данных-->
+        <Grid Grid.Row="1">
+            <DataGrid Margin="10" x:Name="dataView" AutoGenerateColumns="False" IsReadOnly="True"
+                       ColumnWidth="*">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="0.3*"/>
+                    <DataGridTextColumn Header="Имя Животного" Binding="{Binding NameAnimals}" Width="*"/>
+                    <DataGridTextColumn Header="Континент" Binding="{Binding Continent.NameContinent}" Width="*"/>
+                    <DataGridTextColumn Header="Семейство животного" Binding="{Binding FamelyAnimals.NameFamaly}" Width="*"/>
+                    <DataGridTextColumn Header="Суточная Норма" Binding="{Binding Daily}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <!---->
+        <Grid Grid.Row="3">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button x:Name="btnAdd"
+                        Content="Добавить"
+                        Width="200"
+                        Click="btnAdd_Click"/>
+                <Button x:Name="btnEdit"
+                        Content="Редактировать"
+                        Width="200"
+                        Click="btnEdit_Click"
+                        Margin="10 0 10 0"/>
+                <Button x:Name="btnRemove"
+                        Content="Удалить"
+                        Width="200"
+                        Click="btnRemove_Click"/>
+            </StackPanel>
+        </Grid>
+        <Grid>
+
+            <Grid>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                    <Button Style="{StaticResource MaterialDesignToolForegroundButton}" Width="25" Height="25" x:Name="ButtonBack" Click="ButtonBack_Click">
+
+                        <materialDesign:PackIcon Kind="ArrowBack" Background="Green" Foreground="White" BorderBrush="{x:Null}"/>
+
+                    </Button>
+
+                </StackPanel>
+
+            </Grid>
+
+
+            <Grid>
+
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+
+                    <Button Style="{StaticResource  MaterialDesignToolForegroundButton}" Width="25" Height="25" Click="ButtonClose_Click" x:Name="ButtonClose">
+                        <materialDesign:PackIcon Kind="Power" Background="Red" BorderBrush="{x:Null}" Foreground="White"/>
+                    </Button>
+
+                </StackPanel>
+
+            </Grid>
+
+
+        </Grid>
+    </Grid>
+</Page>

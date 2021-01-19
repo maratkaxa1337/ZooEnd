@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище dbZooModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Animals">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameAnimals" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Daily" Type="float" Nullable="false" />
+          <Property Name="IDContinent" Type="int" />
+          <Property Name="IDFamalyAnimals" Type="int" />
+          <Property Name="IDRoom" Type="int" />
+          <Property Name="IDAnimalsHome" Type="int" />
+        </EntityType>
+        <EntityType Name="AnimalsHome">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameComplex" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Reservoir" Type="bit" Nullable="false" />
+          <Property Name="Heating" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Continent">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameContinent" Type="nvarchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FamelyAnimals">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameFamaly" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Room">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameRoom" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="NumberAnimals" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "dbZoo.dbo.SignIn" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="SignIn">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Username" />
+            <PropertyRef Name="Password" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="IDRole" Type="nchar" MaxLength="1" />
+        </EntityType>
+        <Association Name="FK_Animals_Continent_Continent_ID">
+          <End Role="Continent" Type="Self.Continent" Multiplicity="0..1" />
+          <End Role="Animals" Type="Self.Animals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Continent">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Animals">
+              <PropertyRef Name="IDContinent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Animals_IDAnimalsHome">
+          <End Role="AnimalsHome" Type="Self.AnimalsHome" Multiplicity="0..1" />
+          <End Role="Animals" Type="Self.Animals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AnimalsHome">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Animals">
+              <PropertyRef Name="IDAnimalsHome" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Animals_IDFamalyAnimals_FamelyAnimals_ID">
+          <End Role="FamelyAnimals" Type="Self.FamelyAnimals" Multiplicity="0..1" />
+          <End Role="Animals" Type="Self.Animals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FamelyAnimals">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Animals">
+              <PropertyRef Name="IDFamalyAnimals" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Animals_IDRoom_Room_ID">
+          <End Role="Room" Type="Self.Room" Multiplicity="0..1" />
+          <End Role="Animals" Type="Self.Animals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Room">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Animals">
+              <PropertyRef Name="IDRoom" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SignIn_IDRole_Role_RoleID">
+          <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
+          <End Role="SignIn" Type="Self.SignIn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="SignIn">
+              <PropertyRef Name="IDRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище dbZooModelContainer">
+          <EntitySet Name="Animals" EntityType="Self.Animals" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AnimalsHome" EntityType="Self.AnimalsHome" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Continent" EntityType="Self.Continent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FamelyAnimals" EntityType="Self.FamelyAnimals" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SignIn" EntityType="Self.SignIn" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [SignIn].[ID] AS [ID], 
+    [SignIn].[Username] AS [Username], 
+    [SignIn].[Password] AS [Password], 
+    [SignIn].[IDRole] AS [IDRole]
+    FROM [dbo].[SignIn] AS [SignIn]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Animals_Continent_Continent_ID" Association="Self.FK_Animals_Continent_Continent_ID">
+            <End Role="Continent" EntitySet="Continent" />
+            <End Role="Animals" EntitySet="Animals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Animals_IDAnimalsHome" Association="Self.FK_Animals_IDAnimalsHome">
+            <End Role="AnimalsHome" EntitySet="AnimalsHome" />
+            <End Role="Animals" EntitySet="Animals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Animals_IDFamalyAnimals_FamelyAnimals_ID" Association="Self.FK_Animals_IDFamalyAnimals_FamelyAnimals_ID">
+            <End Role="FamelyAnimals" EntitySet="FamelyAnimals" />
+            <End Role="Animals" EntitySet="Animals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Animals_IDRoom_Room_ID" Association="Self.FK_Animals_IDRoom_Room_ID">
+            <End Role="Room" EntitySet="Room" />
+            <End Role="Animals" EntitySet="Animals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SignIn_IDRole_Role_RoleID" Association="Self.FK_SignIn_IDRole_Role_RoleID">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="SignIn" EntitySet="SignIn" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbZooModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Animals">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameAnimals" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Daily" Type="Double" Nullable="false" />
+          <Property Name="IDContinent" Type="Int32" />
+          <Property Name="IDFamalyAnimals" Type="Int32" />
+          <Property Name="IDRoom" Type="Int32" />
+          <Property Name="IDAnimalsHome" Type="Int32" />
+          <NavigationProperty Name="Continent" Relationship="Self.FK_Animals_Continent_Continent_ID" FromRole="Animals" ToRole="Continent" />
+          <NavigationProperty Name="AnimalsHome" Relationship="Self.FK_Animals_IDAnimalsHome" FromRole="Animals" ToRole="AnimalsHome" />
+          <NavigationProperty Name="FamelyAnimals" Relationship="Self.FK_Animals_IDFamalyAnimals_FamelyAnimals_ID" FromRole="Animals" ToRole="FamelyAnimals" />
+          <NavigationProperty Name="Room" Relationship="Self.FK_Animals_IDRoom_Room_ID" FromRole="Animals" ToRole="Room" />
+        </EntityType>
+        <EntityType Name="AnimalsHome">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameComplex" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Reservoir" Type="Boolean" Nullable="false" />
+          <Property Name="Heating" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Animals" Relationship="Self.FK_Animals_IDAnimalsHome" FromRole="AnimalsHome" ToRole="Animals" />
+        </EntityType>
+        <EntityType Name="Continent">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameContinent" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Animals" Relationship="Self.FK_Animals_Continent_Continent_ID" FromRole="Continent" ToRole="Animals" />
+        </EntityType>
+        <EntityType Name="FamelyAnimals">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameFamaly" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Animals" Relationship="Self.FK_Animals_IDFamalyAnimals_FamelyAnimals_ID" FromRole="FamelyAnimals" ToRole="Animals" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="SignIn" Relationship="Self.FK_SignIn_IDRole_Role_RoleID" FromRole="Role" ToRole="SignIn" />
+        </EntityType>
+        <EntityType Name="Room">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameRoom" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NumberAnimals" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Animals" Relationship="Self.FK_Animals_IDRoom_Room_ID" FromRole="Room" ToRole="Animals" />
+        </EntityType>
+        <EntityType Name="SignIn">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Username" />
+            <PropertyRef Name="Password" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IDRole" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Role" Relationship="Self.FK_SignIn_IDRole_Role_RoleID" FromRole="SignIn" ToRole="Role" />
+        </EntityType>
+        <Association Name="FK_Animals_Continent_Continent_ID">
+          <End Role="Continent" Type="Self.Continent" Multiplicity="0..1" />
+          <End Role="Animals" Type="Self.Animals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Continent">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Animals">
+              <PropertyRef Name="IDContinent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Animals_IDAnimalsHome">
+          <End Role="AnimalsHome" Type="Self.AnimalsHome" Multiplicity="0..1" />
+          <End Role="Animals" Type="Self.Animals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AnimalsHome">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Animals">
+              <PropertyRef Name="IDAnimalsHome" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Animals_IDFamalyAnimals_FamelyAnimals_ID">
+          <End Role="FamelyAnimals" Type="Self.FamelyAnimals" Multiplicity="0..1" />
+          <End Role="Animals" Type="Self.Animals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FamelyAnimals">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Animals">
+              <PropertyRef Name="IDFamalyAnimals" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Animals_IDRoom_Room_ID">
+          <End Role="Room" Type="Self.Room" Multiplicity="0..1" />
+          <End Role="Animals" Type="Self.Animals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Room">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Animals">
+              <PropertyRef Name="IDRoom" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SignIn_IDRole_Role_RoleID">
+          <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
+          <End Role="SignIn" Type="Self.SignIn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="SignIn">
+              <PropertyRef Name="IDRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbZooEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Animals" EntityType="Self.Animals" />
+          <EntitySet Name="AnimalsHome" EntityType="Self.AnimalsHome" />
+          <EntitySet Name="Continent" EntityType="Self.Continent" />
+          <EntitySet Name="FamelyAnimals" EntityType="Self.FamelyAnimals" />
+          <EntitySet Name="Role" EntityType="Self.Role" />
+          <EntitySet Name="Room" EntityType="Self.Room" />
+          <EntitySet Name="SignIn" EntityType="Self.SignIn" />
+          <AssociationSet Name="FK_Animals_Continent_Continent_ID" Association="Self.FK_Animals_Continent_Continent_ID">
+            <End Role="Continent" EntitySet="Continent" />
+            <End Role="Animals" EntitySet="Animals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Animals_IDAnimalsHome" Association="Self.FK_Animals_IDAnimalsHome">
+            <End Role="AnimalsHome" EntitySet="AnimalsHome" />
+            <End Role="Animals" EntitySet="Animals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Animals_IDFamalyAnimals_FamelyAnimals_ID" Association="Self.FK_Animals_IDFamalyAnimals_FamelyAnimals_ID">
+            <End Role="FamelyAnimals" EntitySet="FamelyAnimals" />
+            <End Role="Animals" EntitySet="Animals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Animals_IDRoom_Room_ID" Association="Self.FK_Animals_IDRoom_Room_ID">
+            <End Role="Room" EntitySet="Room" />
+            <End Role="Animals" EntitySet="Animals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SignIn_IDRole_Role_RoleID" Association="Self.FK_SignIn_IDRole_Role_RoleID">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="SignIn" EntitySet="SignIn" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище dbZooModelContainer" CdmEntityContainer="dbZooEntities">
+          <EntitySetMapping Name="Animals">
+            <EntityTypeMapping TypeName="dbZooModel.Animals">
+              <MappingFragment StoreEntitySet="Animals">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NameAnimals" ColumnName="NameAnimals" />
+                <ScalarProperty Name="Daily" ColumnName="Daily" />
+                <ScalarProperty Name="IDContinent" ColumnName="IDContinent" />
+                <ScalarProperty Name="IDFamalyAnimals" ColumnName="IDFamalyAnimals" />
+                <ScalarProperty Name="IDRoom" ColumnName="IDRoom" />
+                <ScalarProperty Name="IDAnimalsHome" ColumnName="IDAnimalsHome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AnimalsHome">
+            <EntityTypeMapping TypeName="dbZooModel.AnimalsHome">
+              <MappingFragment StoreEntitySet="AnimalsHome">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NameComplex" ColumnName="NameComplex" />
+                <ScalarProperty Name="Reservoir" ColumnName="Reservoir" />
+                <ScalarProperty Name="Heating" ColumnName="Heating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Continent">
+            <EntityTypeMapping TypeName="dbZooModel.Continent">
+              <MappingFragment StoreEntitySet="Continent">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NameContinent" ColumnName="NameContinent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FamelyAnimals">
+            <EntityTypeMapping TypeName="dbZooModel.FamelyAnimals">
+              <MappingFragment StoreEntitySet="FamelyAnimals">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NameFamaly" ColumnName="NameFamaly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Role">
+            <EntityTypeMapping TypeName="dbZooModel.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Room">
+            <EntityTypeMapping TypeName="dbZooModel.Room">
+              <MappingFragment StoreEntitySet="Room">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NameRoom" ColumnName="NameRoom" />
+                <ScalarProperty Name="NumberAnimals" ColumnName="NumberAnimals" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SignIn">
+            <EntityTypeMapping TypeName="dbZooModel.SignIn">
+              <MappingFragment StoreEntitySet="SignIn">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="IDRole" ColumnName="IDRole" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
