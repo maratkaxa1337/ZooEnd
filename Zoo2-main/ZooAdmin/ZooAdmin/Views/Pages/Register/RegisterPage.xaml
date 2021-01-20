@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ZooAdmin.Views.Pages.Register"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="720" d:DesignWidth="1280"
       Title="RegisterPage" 
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -15,7 +15,7 @@
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}">
-    
+
     <!--Глобальный Grid-->
     <Grid>
         <!--Добавлене фона Регистрации-->
@@ -25,9 +25,9 @@
                 <Image Source="/Image/Register/RegisterFon.jpg"/>
 
             </StackPanel>
-            
-        </Grid>
 
+        </Grid>
+<!--Добавляем разметку для Текста и Кнопок-->
         <Grid>
             <Grid.ColumnDefinitions>
 
@@ -43,15 +43,12 @@
 
             </Grid.RowDefinitions>
 
-            <StackPanel Grid.Row="0" Grid.Column="2">
-                <Image Source="/Image/Register/AvaRegister.png" Margin="40"/>
 
-            </StackPanel>
-            
+
         </Grid>
 
 
-
+<!--Добавляем отдельную разметку для кнопок и текста-->
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.4*"/>
@@ -60,22 +57,65 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <StackPanel>
-                
-                
-                
+            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                <TextBox x:Name="txbNewname"
+                             Width="350"
+                             Height="60"
+                             materialDesign:HintAssist.Hint="Введите имя"
+                             BorderBrush="Yellow" 
+                             Foreground="White"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+
             </StackPanel>
-            
+            <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+                <TextBox x:Name="txbNewPassword"
+                            Width="350"
+                            Height="60"
+                            materialDesign:HintAssist.Hint="Введите пароль"
+                            BorderBrush="Yellow"
+                            Foreground="White"
+                            Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+
+
+            </StackPanel>
+            <StackPanel Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+
+                <Button x:Name="btnRegister"
+                         Content="Регестрация"
+                         Width="300"
+                         Height="40"
+                         materialDesign:ButtonAssist.CornerRadius="15"
+                         Background="#65E268"
+                         FontSize="20"
+                         FontWeight="DemiBold"
+                         Foreground="Black"
+                         Click="btnRegister_Click"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="3" >
+
+                <TextBlock Text="Выберите Роль" FontSize="15" VerticalAlignment="Center" Width="120" 
+                           Foreground="White"/>
+                <ComboBox  x:Name="cmbRole"
+                            Width="250"
+                            Height="40"/>
+
+            </StackPanel>
+
         </Grid>
-        
-        
-        
+
+
+
         <!--Добавление кнопок закрыть и назад-->
         <Grid>
 
@@ -83,9 +123,16 @@
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
 
-                    <Button Style="{StaticResource MaterialDesignToolForegroundButton}" Width="25" Height="25" x:Name="ButtonBack" Click="ButtonBack_Click">
+                    <Button Style="{StaticResource MaterialDesignToolForegroundButton}" 
+                            Width="25"
+                            Height="25" 
+                            x:Name="ButtonBack"
+                            Click="ButtonBack_Click">
 
-                        <materialDesign:PackIcon Kind="ArrowBack" Background="Green" Foreground="White" BorderBrush="{x:Null}"/>
+                        <materialDesign:PackIcon Kind="ArrowBack" 
+                                                 Background="Green" 
+                                                 Foreground="White" 
+                                                 BorderBrush="{x:Null}"/>
 
                     </Button>
 
@@ -99,7 +146,13 @@
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
 
-                    <Button Style="{StaticResource  MaterialDesignToolForegroundButton}" Width="25" Height="25" Click="ButtonClose_Click" x:Name="ButtonClose">
+                    <Button Style="{StaticResource  MaterialDesignToolForegroundButton}" 
+                            
+                            Width="25"
+                            Height="25" 
+                            Click="ButtonClose_Click" 
+                            x:Name="ButtonClose">
+
                         <materialDesign:PackIcon Kind="Power" Background="Red" BorderBrush="{x:Null}" Foreground="White"/>
                     </Button>
 
@@ -109,6 +162,6 @@
 
 
         </Grid>
-        
+
     </Grid>
 </Page>

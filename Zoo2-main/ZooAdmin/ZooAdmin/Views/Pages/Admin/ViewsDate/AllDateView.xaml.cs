@@ -31,10 +31,52 @@ namespace ZooAdmin.Views.Pages.Admin.ViewsDate
 
         private void txbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            DataView.ItemsSource = ConnectContext.db.Animals.Where(item => item.NameAnimals.Contains(txbSearch.Text) || item.Daily.ToString().Contains(txbSearch.Text) ||
+            item.Continent.NameContinent.Contains(txbSearch.Text) ||
+            item.AnimalsHome.NameComplex.Contains(txbSearch.Text)).ToList();
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            DataView.ItemsSource = ConnectContext.db.Animals.ToList();
+        }
+
+        private void ButtonBack_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
+
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void chb_Normali_Checked(object sender, RoutedEventArgs e)
+        {
+            DataView.ItemsSource = ConnectContext.db.Animals.Where(item => item.FamelyAnimals.NameFamaly == "Приматы" || item.FamelyAnimals.NameFamaly == "Примат").ToList();
+        }
+
+        private void chb_Normali_Unchecked(object sender, RoutedEventArgs e)
+        {
+            DataView.ItemsSource = ConnectContext.db.Animals.ToList();
+        }
+
+        private void chb_room_Checked(object sender, RoutedEventArgs e)
+        {
+            DataView.ItemsSource = ConnectContext.db.Animals.Where(item => item.Room.NameRoom == "Дикие Животные").ToList();
+        }
+
+        private void chb_room_Unchecked(object sender, RoutedEventArgs e)
+        {
+            DataView.ItemsSource = ConnectContext.db.Animals.ToList();
+        }
+
+        private void chb_Dog_Checked(object sender, RoutedEventArgs e)
+        {
+            DataView.ItemsSource = ConnectContext.db.Animals.Where(item => item.FamelyAnimals.NameFamaly == "Собачьих").ToList();
+        }
+
+        private void chb_Dog_Unchecked(object sender, RoutedEventArgs e)
         {
             DataView.ItemsSource = ConnectContext.db.Animals.ToList();
         }

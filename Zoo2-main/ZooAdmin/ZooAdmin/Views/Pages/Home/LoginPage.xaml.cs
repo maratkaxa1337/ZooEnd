@@ -34,7 +34,7 @@ namespace ZooAdmin.Views.Pages.Home
         {
             try
             {
-                var currentUser = ConnectContext.db.SignIn.FirstOrDefault(item => item.Username == txbUsername.Text &&
+                var currentUser = ConnectContext.db.SignIn.FirstOrDefault(item => item.Username == txbUsername.Text && 
                 item.Password == psbPassword.Password);
                 if (currentUser != null)
                 {

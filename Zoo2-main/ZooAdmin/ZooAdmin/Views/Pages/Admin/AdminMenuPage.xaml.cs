@@ -31,14 +31,10 @@ namespace ZooAdmin.Views.Pages.Admin
             NavigationService.GoBack();
         }
 
-        private void ButtonBack_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
-
+            Application.Current.Shutdown();
         }
 
         private void buttonAdd_Click(object sender, RoutedEventArgs e)
@@ -49,6 +45,12 @@ namespace ZooAdmin.Views.Pages.Admin
         private void ButtonViews_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new AllDateView());
+        }
+
+
+        private void ButtonBack_Click_2(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
         }
     }
 }

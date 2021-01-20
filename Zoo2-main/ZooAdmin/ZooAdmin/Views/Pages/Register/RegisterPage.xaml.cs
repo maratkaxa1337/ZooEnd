@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ZooAdmin.Context;
+using ZooAdmin.Models;
 
 namespace ZooAdmin.Views.Pages.Register
 {
@@ -23,16 +25,51 @@ namespace ZooAdmin.Views.Pages.Register
         public RegisterPage()
         {
             InitializeComponent();
+            AutoFull();
         }
 
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
+        void AutoFull()
+        {
+            cmbRole.DisplayMemberPath = "Title";
+            cmbRole.SelectedValuePath = "ID";
+            cmbRole.ItemsSource = ConnectContext.db.Role.ToList();
+        }
+
 
         private void ButtonBack_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
+        }
+
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            try
+                
+            {
+                var currentUser2 = ConnectContext.db.SignIn.FirstOrDefault(Item => Item.Username == txbNewname.Text && Item.Password == txbNewPassword.Text);
+                SignIn signin = new SignIn()
+                {
+                    Username = txbNewname.Text,
+                    Password = txbNewPassword.Text,
+                    Role = cmbRole.SelectedItem as Role,
+                };
+                ConnectContext.db.SignIn.Add(signin);
+                ConnectContext.db.SaveChanges();
+                MessageBox.Show("Вы зарегистрированы");
+
+
+            }
+            catch (Exception ex)
+            {
+
+
+                MessageBox.Show(ex.Message);
+               
+            }
         }
     }
 }
