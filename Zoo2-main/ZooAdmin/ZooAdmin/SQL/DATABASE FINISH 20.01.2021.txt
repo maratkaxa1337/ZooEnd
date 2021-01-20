@@ -1,0 +1,144 @@
+CREATE DATABASE [dbZoo]
+
+USE [dbZoo]
+
+GO
+
+
+CREATE TABLE [FamelyAnimals] (
+
+[ID]			INT IDENTITY (0 ,1),
+[NameFamaly]	NVARCHAR(50)	NOT NULL,
+CONSTRAINT		PK_FamelyAnimals_ID PRIMARY KEY (ID)
+
+)
+
+GO
+
+Select * from [FamelyAnimals]
+
+
+
+INSERT INTO [FamelyAnimals] ([NameFamaly]) VALUES ('Кошачьих')
+INSERT INTO [FamelyAnimals] ([NameFamaly]) VALUES ('Полорогих')
+INSERT INTO [FamelyAnimals] ([NameFamaly]) VALUES ('Куньих')
+INSERT INTO [FamelyAnimals] ([NameFamaly]) VALUES ('Собачьих')
+INSERT INTO [FamelyAnimals] ([NameFamaly]) VALUES ('Тюленей')
+INSERT INTO [FamelyAnimals] ([NameFamaly]) VALUES ('Приматы')
+
+
+
+CREATE TABLE [Continent] (
+
+[ID]					INT IDENTITY(0, 1),
+[NameContinent]				NVARCHAR(30) NOT NULL,
+CONSTRAINT PK_Famaly_ID PRIMARY KEY (ID)
+
+)
+
+GO
+
+INSERT INTO [Continent] ([NameContinent]) VALUES ('Евразия')
+INSERT INTO [Continent] ([NameContinent]) VALUES ('Африка')
+INSERT INTO [Continent] ([NameContinent]) VALUES ('Северная Америка')
+INSERT INTO [Continent] ([NameContinent]) VALUES ('Южная Америка')
+INSERT INTO [Continent] ([NameContinent]) VALUES ('Австралия')
+INSERT INTO [Continent] ([NameContinent]) VALUES ('Антарктида')
+
+SELECT * FROM [FamelyAnimals]
+
+
+
+
+CREATE TABLE [Room] (
+
+[ID]			INT IDENTITY (0, 1),
+[NameRoom]		NVARCHAR(30)	NOT NULL,
+[NumberAnimals] INT				NOT NULL,
+CONSTRAINT PK_Room_ID PRIMARY KEY (ID)
+
+)
+
+GO
+
+INSERT INTO [Room] ([NameRoom],[NumberAnimals]) VALUES ('Дикие Животные','7')
+INSERT INTO [Room] ([NameRoom],[NumberAnimals]) VALUES ('Мягкие Животные','1')
+
+SELECT * FROM Room
+
+CREATE TABLE [AnimalsHome] (
+
+[ID]				INT IDENTITY(0, 1),
+[NameComplex]		NVARCHAR(30)	  NOT NULL,
+[Reservoir]			BIT				  NOT NULL,
+[Heating]			BIT				  NOT NULL,
+CONSTRAINT PK_AnimalsHome_ID PRIMARY KEY (ID)
+)
+
+GO
+
+INSERT INTO [AnimalsHome] ([NameComplex],[Reservoir],[Heating]) VALUES ('Зоопарк Магнус','1','0')
+INSERT INTO [AnimalsHome] ([NameComplex],[Reservoir],[Heating]) VALUES ('Москва Zoo','1','0')
+INSERT INTO [AnimalsHome] ([NameComplex],[Reservoir],[Heating]) VALUES ('Zoo Centr','1','0')
+
+SELECT * FROM [AnimalsHome]
+
+CREATE TABLE [Animals] (
+
+[ID]				INT IDENTITY(0, 1),
+[NameAnimals]		NVARCHAR(30)		NOT NULL,
+[Daily]				FLOAT				NOT NULL,
+[IDContinent]		INT					CONSTRAINT FK_Animals_Continent_Continent_ID				FOREIGN KEY REFERENCES [Continent] ([ID]),
+[IDFamalyAnimals]	INT					CONSTRAINT FK_Animals_IDFamalyAnimals_FamelyAnimals_ID		FOREIGN KEY REFERENCES [FamelyAnimals] ([ID]),
+[IDRoom]			INT					CONSTRAINT FK_Animals_IDRoom_Room_ID						FOREIGN KEY REFERENCES [Room] ([ID]),
+[IDAnimalsHome]		INT					CONSTRAINT FK_Animals_IDAnimalsHome 						FOREIGN KEY REFERENCES [AnimalsHome] ([ID]),
+CONSTRAINT PK_Animals_ID PRIMARY KEY (ID)
+)
+
+GO
+
+INSERT INTO [Animals] ([NameAnimals],[Daily],[IDContinent],[IDFamalyAnimals],[IDRoom],[IDAnimalsHome]) VALUES ('Тигр','5','1','0','1','1')
+INSERT INTO [Animals] ([NameAnimals],[Daily],[IDContinent],[IDFamalyAnimals],[IDRoom],[IDAnimalsHome]) VALUES ('Лев','5','1','0','0','0')
+INSERT INTO [Animals] ([NameAnimals],[Daily],[IDContinent],[IDFamalyAnimals],[IDRoom],[IDAnimalsHome]) VALUES ('Мартышка','1','5','5','1','1')
+INSERT INTo [Animals] ([NameAnimals],[Daily],[IDContinent],[IDFamalyAnimals],[IDRoom],[IDAnimalsHome]) VALUES ('Рыжий Волк','2','0','3','0','2')
+ 
+SELECT * FROM [Animals]
+
+
+
+CREATE TABLE [Role] (
+
+[RoleID]	NCHAR(1)		NOT NULL,
+[Title]		NVARCHAR(30)	NOT NULL,
+CONSTRAINT PK_Role_RoleID PRIMARY KEY (RoleID)
+
+)
+
+GO
+
+
+
+INSERT INTO [Role] ([RoleID],[Title]) VALUES ('A','Администратор')
+INSERT INTO [Role] ([RoleID],[Title]) VALUES ('U','Пользователь')
+
+
+
+CREATE TABLE [SignIn] (
+
+[ID]		INT IDENTITY(0, 1),
+[Username]	NVARCHAR(30)	NOT NULL,
+[Password]	NVARCHAR(30)	NOT NULL,
+[IDRole] NCHAR(1) CONSTRAINT FK_SignIn_IDRole_Role_RoleID FOREIGN KEY REFERENCES [Role] ([RoleID]),
+CONSTRAINT PK_SignIn_ID PRIMARY KEY (ID)
+
+)
+
+GO
+
+INSERT INTO [SignIn] ([Username],[Password],[IDRole]) VALUES ('marat','1234','A')
+INSERT INTO [SignIn] ([Username],[Password],[IDRole]) VALUES ('kaxa','1234','U')
+
+USE master
+DROP DATABASE [dbZoo]
+
+Select * From [Room]
