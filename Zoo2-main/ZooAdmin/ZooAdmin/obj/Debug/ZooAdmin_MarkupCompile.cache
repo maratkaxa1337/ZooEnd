@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Marat C#\ZooEnd\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\
+E:\Сбор моих программы на Любом языке\C#\ZooEnd\Zoo2-main\ZooAdmin\ZooAdmin\obj\Debug\
 ZooAdmin
 none
 false
 DEBUG;TRACE
-D:\Marat C#\ZooEnd\Zoo2-main\ZooAdmin\ZooAdmin\App.xaml
+E:\Сбор моих программы на Любом языке\C#\ZooEnd\Zoo2-main\ZooAdmin\ZooAdmin\App.xaml
 111058003431
 21628359195
-26156019690
-201305821531
+27-65709068
+201093866032
 Views\Pages\Admin\AdminAddPage.xaml;Views\Pages\Admin\AdminEditPage.xaml;Views\Pages\Admin\AdminMenuPage.xaml;Views\Pages\Admin\AdminViewPage.xaml;Views\Pages\Admin\ViewsDate\AllDateView.xaml;Views\Pages\Home\LoginPage.xaml;Views\Pages\Register\RegisterPage.xaml;Views\Pages\User\UserBuyPage.xaml;Views\Pages\User\UserContactsPage.xaml;Views\Pages\User\UserMenuPage.xaml;Views\Windows\MainWindow.xaml;
 
 False

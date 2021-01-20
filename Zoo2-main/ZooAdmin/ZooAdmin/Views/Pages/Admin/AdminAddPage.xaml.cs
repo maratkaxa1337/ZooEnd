@@ -65,9 +65,9 @@ namespace ZooAdmin.Views.Pages.Admin
                 MessageBox.Show("Данные успешно сохранены");
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message, ex.Source);
             }
         }
 

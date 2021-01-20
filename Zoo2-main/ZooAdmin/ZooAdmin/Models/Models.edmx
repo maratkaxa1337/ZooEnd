@@ -55,18 +55,24 @@
           <Property Name="NameRoom" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="NumberAnimals" Type="int" Nullable="false" />
         </EntityType>
-        <!--Ошибки, обнаруженные при создании:
-предупреждение 6002: В таблице или представлении "dbZoo.dbo.SignIn" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
         <EntityType Name="SignIn">
           <Key>
             <PropertyRef Name="ID" />
-            <PropertyRef Name="Username" />
-            <PropertyRef Name="Password" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Username" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="IDRole" Type="nchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <Association Name="FK_Animals_Continent_Continent_ID">
           <End Role="Continent" Type="Self.Continent" Multiplicity="0..1" />
@@ -135,14 +141,8 @@
           <EntitySet Name="FamelyAnimals" EntityType="Self.FamelyAnimals" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="SignIn" EntityType="Self.SignIn" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [SignIn].[ID] AS [ID], 
-    [SignIn].[Username] AS [Username], 
-    [SignIn].[Password] AS [Password], 
-    [SignIn].[IDRole] AS [IDRole]
-    FROM [dbo].[SignIn] AS [SignIn]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="SignIn" EntityType="Self.SignIn" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Animals_Continent_Continent_ID" Association="Self.FK_Animals_Continent_Continent_ID">
             <End Role="Continent" EntitySet="Continent" />
             <End Role="Animals" EntitySet="Animals" />
@@ -231,14 +231,22 @@
         <EntityType Name="SignIn">
           <Key>
             <PropertyRef Name="ID" />
-            <PropertyRef Name="Username" />
-            <PropertyRef Name="Password" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Username" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="IDRole" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="Role" Relationship="Self.FK_SignIn_IDRole_Role_RoleID" FromRole="SignIn" ToRole="Role" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <Association Name="FK_Animals_Continent_Continent_ID">
           <End Role="Continent" Type="Self.Continent" Multiplicity="0..1" />
@@ -308,6 +316,7 @@
           <EntitySet Name="Role" EntityType="Self.Role" />
           <EntitySet Name="Room" EntityType="Self.Room" />
           <EntitySet Name="SignIn" EntityType="Self.SignIn" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <AssociationSet Name="FK_Animals_Continent_Continent_ID" Association="Self.FK_Animals_Continent_Continent_ID">
             <End Role="Continent" EntitySet="Continent" />
             <End Role="Animals" EntitySet="Animals" />
@@ -398,6 +407,17 @@
                 <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="IDRole" ColumnName="IDRole" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="dbZooModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

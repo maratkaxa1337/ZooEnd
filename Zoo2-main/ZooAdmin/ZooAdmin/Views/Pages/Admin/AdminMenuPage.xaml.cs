@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ZooAdmin.Views.Pages.Admin.ViewsDate;
+using ZooAdmin.Views.Pages.Register;
 
 namespace ZooAdmin.Views.Pages.Admin
 {
@@ -51,6 +52,11 @@ namespace ZooAdmin.Views.Pages.Admin
         private void ButtonBack_Click_2(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
+        }
+
+        private void buttonContack_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new RegisterPage());
         }
     }
 }

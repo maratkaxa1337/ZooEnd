@@ -157,6 +157,9 @@
     <Compile Include="Models\SignIn.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pages\Admin\AdminAddPage.xaml.cs">
       <DependentUpon>AdminAddPage.xaml</DependentUpon>
     </Compile>

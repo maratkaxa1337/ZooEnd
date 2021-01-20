@@ -88,12 +88,13 @@
             <StackPanel Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom">
 
                         <Button x:Name="buttonContack"
-                         Content="Контакты"
+                         Content="Добавить пользователя"
                          Width="444"
                         Height="65"
                         materialDesign:ButtonAssist.CornerRadius="25"
                         FontSize="16"
-                        FontWeight="Bold"/>
+                        FontWeight="Bold"
+                        Click="buttonContack_Click"/>
 
                     </StackPanel>
             <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top">

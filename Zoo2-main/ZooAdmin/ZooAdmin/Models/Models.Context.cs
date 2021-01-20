@@ -32,5 +32,6 @@ namespace ZooAdmin.Models
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Room> Room { get; set; }
         public virtual DbSet<SignIn> SignIn { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

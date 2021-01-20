@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using ZooAdmin.Context;
 using ZooAdmin.Models;
 
@@ -25,18 +16,11 @@ namespace ZooAdmin.Views.Pages.Register
         public RegisterPage()
         {
             InitializeComponent();
-            AutoFull();
         }
 
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
-        }
-        void AutoFull()
-        {
-            cmbRole.DisplayMemberPath = "Title";
-            cmbRole.SelectedValuePath = "ID";
-            cmbRole.ItemsSource = ConnectContext.db.Role.ToList();
         }
 
 
@@ -48,15 +32,16 @@ namespace ZooAdmin.Views.Pages.Register
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
             try
-                
+
             {
-                var currentUser2 = ConnectContext.db.SignIn.FirstOrDefault(Item => Item.Username == txbNewname.Text && Item.Password == txbNewPassword.Text);
-                SignIn signin = new SignIn()
-                {
-                    Username = txbNewname.Text,
-                    Password = txbNewPassword.Text,
-                    Role = cmbRole.SelectedItem as Role,
-                };
+                SignIn signin = new SignIn();
+
+
+
+                signin.Username = txbNewname.Text;
+                signin.Password = txbNewPassword.Text;
+                var Lezkin = ConnectContext.db.Role.FirstOrDefault(item => item.Title == cmbRole.Text);
+                signin.IDRole = Lezkin.RoleID;
                 ConnectContext.db.SignIn.Add(signin);
                 ConnectContext.db.SaveChanges();
                 MessageBox.Show("Вы зарегистрированы");
@@ -68,8 +53,14 @@ namespace ZooAdmin.Views.Pages.Register
 
 
                 MessageBox.Show(ex.Message);
-               
+
             }
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            cmbRole.ItemsSource = ConnectContext.db.Role.Select(item => item.Title).ToList();
+
         }
     }
 }
